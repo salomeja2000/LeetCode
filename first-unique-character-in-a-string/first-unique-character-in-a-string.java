@@ -1,6 +1,6 @@
 class Solution {
     public int firstUniqChar(String s) {
-    String usedCharacters = "";
+        String usedCharacters = "";
         for (int i = 0; i < s.length() - 1; i++) {
             boolean found = false;
             for (int j = i + 1; j < s.length(); j++) {
@@ -18,12 +18,6 @@ class Solution {
                     }
                 }
             }
-            for (int j = 0; j < usedCharacters.length(); j++) {
-                if (s.charAt(i) == usedCharacters.charAt(j)) {
-                    found = true;
-                    break;
-                }
-            }
             if (!found) {
                 return i;
             }
@@ -38,6 +32,6 @@ class Solution {
         if (!found) {
             return s.length() - 1;
         }
-        return -1;    
+        return -1;  
     }
 }
